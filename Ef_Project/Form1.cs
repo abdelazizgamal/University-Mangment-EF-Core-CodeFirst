@@ -18,5 +18,10 @@ namespace Ef_Project
             using var form = new StudentCourseForm();
             form.ShowDialog();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

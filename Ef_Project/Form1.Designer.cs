@@ -17,56 +17,57 @@
 
         private void InitializeComponent()
         {
-            this.btnDeptInstructor = new System.Windows.Forms.Button();
-            this.btnStudentCourse = new System.Windows.Forms.Button();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.SuspendLayout();
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTitle.Location = new System.Drawing.Point(220, 30);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(340, 32);
-            this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "School Database Management";
+            btnDeptInstructor = new Button();
+            btnStudentCourse = new Button();
+            lblTitle = new Label();
+            SuspendLayout();
             // 
             // btnDeptInstructor
             // 
-            this.btnDeptInstructor.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnDeptInstructor.Location = new System.Drawing.Point(150, 120);
-            this.btnDeptInstructor.Name = "btnDeptInstructor";
-            this.btnDeptInstructor.Size = new System.Drawing.Size(480, 80);
-            this.btnDeptInstructor.TabIndex = 1;
-            this.btnDeptInstructor.Text = "Manage Departments && Instructors";
-            this.btnDeptInstructor.UseVisualStyleBackColor = true;
-            this.btnDeptInstructor.Click += new System.EventHandler(this.btnDeptInstructor_Click);
+            btnDeptInstructor.Font = new Font("Segoe UI", 12F);
+            btnDeptInstructor.Location = new Point(150, 120);
+            btnDeptInstructor.Name = "btnDeptInstructor";
+            btnDeptInstructor.Size = new Size(480, 80);
+            btnDeptInstructor.TabIndex = 1;
+            btnDeptInstructor.Text = "Manage Departments && Instructors";
+            btnDeptInstructor.UseVisualStyleBackColor = true;
+            btnDeptInstructor.Click += btnDeptInstructor_Click;
             // 
             // btnStudentCourse
             // 
-            this.btnStudentCourse.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnStudentCourse.Location = new System.Drawing.Point(150, 230);
-            this.btnStudentCourse.Name = "btnStudentCourse";
-            this.btnStudentCourse.Size = new System.Drawing.Size(480, 80);
-            this.btnStudentCourse.TabIndex = 2;
-            this.btnStudentCourse.Text = "Manage Students && Courses";
-            this.btnStudentCourse.UseVisualStyleBackColor = true;
-            this.btnStudentCourse.Click += new System.EventHandler(this.btnStudentCourse_Click);
+            btnStudentCourse.Font = new Font("Segoe UI", 12F);
+            btnStudentCourse.Location = new Point(150, 230);
+            btnStudentCourse.Name = "btnStudentCourse";
+            btnStudentCourse.Size = new Size(480, 80);
+            btnStudentCourse.TabIndex = 2;
+            btnStudentCourse.Text = "Manage Students && Courses";
+            btnStudentCourse.UseVisualStyleBackColor = true;
+            btnStudentCourse.Click += btnStudentCourse_Click;
+            // 
+            // lblTitle
+            // 
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            lblTitle.Location = new Point(220, 30);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(360, 32);
+            lblTitle.TabIndex = 0;
+            lblTitle.Text = "School Database Management";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 361);
-            this.Controls.Add(this.lblTitle);
-            this.Controls.Add(this.btnDeptInstructor);
-            this.Controls.Add(this.btnStudentCourse);
-            this.Name = "Form1";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "School DB - Main Menu";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(784, 361);
+            Controls.Add(lblTitle);
+            Controls.Add(btnDeptInstructor);
+            Controls.Add(btnStudentCourse);
+            Name = "Form1";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "School DB - Main Menu";
+            Load += Form1_Load;
+            ResumeLayout(false);
+            PerformLayout();
 
         }
 

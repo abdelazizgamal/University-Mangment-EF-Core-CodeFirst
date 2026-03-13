@@ -107,8 +107,8 @@ namespace Ef_Project
             dept.Name = txtDeptName.Text.Trim();
             dept.Location = string.IsNullOrWhiteSpace(txtDeptLocation.Text) ? null : txtDeptLocation.Text.Trim();
             var instId = (int?)cmbDeptManager.SelectedValue;
-            var inst = ctx.Instructors.Find(instId);
-            if (inst.ID > 0 && instId != dept.ManagerID) {
+            var inst = ctx.Departments.Any(d => d.ManagerID == instId);
+            if (inst && instId != dept.ManagerID) {
 
                 MessageBox.Show("This Manager Already manages another Department", "Warning");
 
@@ -199,7 +199,7 @@ namespace Ef_Project
             if (cmbInstDept.SelectedValue == null) { MessageBox.Show("Select a department.", "Validation"); return; }
             if (string.IsNullOrWhiteSpace(txtInstFirst.Text) || string.IsNullOrWhiteSpace(txtInstLast.Text))
             {
-                MessageBox.Show("First and Last Name is required.", "Validation");
+                MessageBox.Show("Name is required.", "Validation");
                 return;
             }
             using var ctx = new MyDbContext();

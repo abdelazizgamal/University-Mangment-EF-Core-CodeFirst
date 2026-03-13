@@ -6,13 +6,7 @@ namespace Ef_Project
 {
     public class MyDbContext : DbContext
     {
-        public DbSet<Department> Departments { get; set; }
-        public DbSet<Instructor> Instructors { get; set; }
-        public DbSet<Course> Courses { get; set; }
-        public DbSet<CourseSession> CourseSessions { get; set; }
-        public DbSet<CourseSessionAttendance> CourseSessionAttendances { get; set; }
-        public DbSet<Student> Students { get; set; }
-        public DbSet<CourseStudent> CourseStudents { get; set; }
+        
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -22,14 +16,13 @@ namespace Ef_Project
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            // Fluent API configurations
             modelBuilder.ApplyConfiguration(new DepartmentConfiguration());
             modelBuilder.ApplyConfiguration(new CourseConfiguration());
             modelBuilder.ApplyConfiguration(new CourseSessionConfiguration());
             modelBuilder.ApplyConfiguration(new CourseSessionAttendanceConfiguration());
             modelBuilder.ApplyConfiguration(new CourseStudentConfiguration());
 
-            // Instructor -> Department relationship (configured here since Instructor uses Data Annotations)
+
             modelBuilder.Entity<Instructor>()
                 .HasOne(i => i.Department)
                 .WithMany(d => d.Instructors)
@@ -91,5 +84,13 @@ namespace Ef_Project
                 new CourseStudent { CourseID = 3, StudentID = 2 }
             );
         }
+
+        public DbSet<Department> Departments { get; set; }
+        public DbSet<Instructor> Instructors { get; set; }
+        public DbSet<Course> Courses { get; set; }
+        public DbSet<CourseSession> CourseSessions { get; set; }
+        public DbSet<CourseSessionAttendance> CourseSessionAttendances { get; set; }
+        public DbSet<Student> Students { get; set; }
+        public DbSet<CourseStudent> CourseStudents { get; set; }
     }
 }
