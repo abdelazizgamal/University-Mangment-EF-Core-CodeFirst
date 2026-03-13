@@ -17,10 +17,10 @@ namespace Ef_Project
 
         private void DeptInstructorForm_Load(object? sender, EventArgs e)
         {
+            //Default to first tab Department Data load
             LoadDepartments();
             LoadManagerCombo();
-            LoadInstructors();
-            LoadDeptCombo();
+         
         }
 
         private void TabControl_SelectedIndexChanged(object? sender, EventArgs e)
@@ -106,7 +106,15 @@ namespace Ef_Project
             if (dept == null) return;
             dept.Name = txtDeptName.Text.Trim();
             dept.Location = string.IsNullOrWhiteSpace(txtDeptLocation.Text) ? null : txtDeptLocation.Text.Trim();
-            dept.ManagerID = (int?)cmbDeptManager.SelectedValue is 0 ? null : (int?)cmbDeptManager.SelectedValue;
+            var instId = (int?)cmbDeptManager.SelectedValue;
+            var inst = ctx.Instructors.Find(instId);
+            if (inst.ID > 0 && instId != dept.ManagerID) {
+
+                MessageBox.Show("This Manager Already manages another Department", "Warning");
+
+                return;
+            }
+            dept.ManagerID = instId is 0 ? null : (int?)cmbDeptManager.SelectedValue;
             ctx.SaveChanges();
             ClearDeptFields();
             LoadDepartments();
@@ -115,7 +123,7 @@ namespace Ef_Project
         private void btnDeptDelete_Click(object sender, EventArgs e)
         {
             if (_selectedDeptId == null) { MessageBox.Show("Select a department first."); return; }
-            if (MessageBox.Show("Delete this department?", "Confirm", MessageBoxButtons.YesNo) != DialogResult.Yes) return;
+            if (MessageBox.Show($"Delete department [{_selectedDeptId}]?", "Confirm", MessageBoxButtons.YesNo) != DialogResult.Yes) return;
             try
             {
                 using var ctx = new MyDbContext();
@@ -189,6 +197,11 @@ namespace Ef_Project
         private void btnInstAdd_Click(object sender, EventArgs e)
         {
             if (cmbInstDept.SelectedValue == null) { MessageBox.Show("Select a department.", "Validation"); return; }
+            if (string.IsNullOrWhiteSpace(txtInstFirst.Text) || string.IsNullOrWhiteSpace(txtInstLast.Text))
+            {
+                MessageBox.Show("First and Last Name is required.", "Validation");
+                return;
+            }
             using var ctx = new MyDbContext();
             var inst = new Instructor
             {
@@ -243,6 +256,10 @@ namespace Ef_Project
                 MessageBox.Show("Cannot delete: this instructor has related records.", "Error");
             }
         }
+        private void dgvDepartments_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
 
         private void btnInstClear_Click(object sender, EventArgs e) => ClearInstFields();
 
@@ -254,5 +271,6 @@ namespace Ef_Project
             txtInstPhone.Clear();
             if (cmbInstDept.Items.Count > 0) cmbInstDept.SelectedIndex = 0;
         }
+
     }
 }

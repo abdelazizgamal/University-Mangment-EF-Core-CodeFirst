@@ -57,10 +57,9 @@ namespace Ef_Project
             tabControl.Controls.Add(tabCourse);
             tabControl.Dock = DockStyle.Fill;
             tabControl.Location = new Point(0, 0);
-            tabControl.Margin = new Padding(3, 4, 3, 4);
             tabControl.Name = "tabControl";
             tabControl.SelectedIndex = 0;
-            tabControl.Size = new Size(1029, 747);
+            tabControl.Size = new Size(900, 560);
             tabControl.TabIndex = 0;
             // 
             // tabStudent
@@ -76,11 +75,10 @@ namespace Ef_Project
             tabStudent.Controls.Add(btnStuUpdate);
             tabStudent.Controls.Add(btnStuDelete);
             tabStudent.Controls.Add(btnStuClear);
-            tabStudent.Location = new Point(4, 29);
-            tabStudent.Margin = new Padding(3, 4, 3, 4);
+            tabStudent.Location = new Point(4, 24);
             tabStudent.Name = "tabStudent";
-            tabStudent.Padding = new Padding(3, 4, 3, 4);
-            tabStudent.Size = new Size(1021, 714);
+            tabStudent.Padding = new Padding(3, 3, 3, 3);
+            tabStudent.Size = new Size(892, 532);
             tabStudent.TabIndex = 0;
             tabStudent.Text = "Students";
             tabStudent.UseVisualStyleBackColor = true;
@@ -90,104 +88,96 @@ namespace Ef_Project
             dgvStudents.AllowUserToAddRows = false;
             dgvStudents.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvStudents.ColumnHeadersHeight = 29;
-            dgvStudents.Location = new Point(11, 13);
-            dgvStudents.Margin = new Padding(3, 4, 3, 4);
+            dgvStudents.Location = new Point(10, 10);
             dgvStudents.MultiSelect = false;
             dgvStudents.Name = "dgvStudents";
             dgvStudents.ReadOnly = true;
             dgvStudents.RowHeadersWidth = 51;
             dgvStudents.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvStudents.Size = new Size(983, 373);
+            dgvStudents.Size = new Size(860, 280);
             dgvStudents.TabIndex = 0;
             dgvStudents.Click += dgvStudents_Click;
             // 
             // lblStuFirst
             // 
             lblStuFirst.AutoSize = true;
-            lblStuFirst.Location = new Point(11, 413);
+            lblStuFirst.Location = new Point(10, 310);
             lblStuFirst.Name = "lblStuFirst";
-            lblStuFirst.Size = new Size(83, 20);
+            lblStuFirst.Size = new Size(67, 15);
             lblStuFirst.TabIndex = 1;
             lblStuFirst.Text = "First Name:";
             // 
             // txtStuFirst
             // 
-            txtStuFirst.Location = new Point(100, 410);
-            txtStuFirst.Margin = new Padding(3, 4, 3, 4);
+            txtStuFirst.Location = new Point(88, 308);
             txtStuFirst.Name = "txtStuFirst";
-            txtStuFirst.Size = new Size(205, 27);
+            txtStuFirst.Size = new Size(180, 23);
             txtStuFirst.TabIndex = 2;
             // 
             // lblStuLast
             // 
             lblStuLast.AutoSize = true;
-            lblStuLast.Location = new Point(343, 413);
+            lblStuLast.Location = new Point(300, 310);
             lblStuLast.Name = "lblStuLast";
-            lblStuLast.Size = new Size(82, 20);
+            lblStuLast.Size = new Size(66, 15);
             lblStuLast.TabIndex = 3;
             lblStuLast.Text = "Last Name:";
             // 
             // txtStuLast
             // 
-            txtStuLast.Location = new Point(431, 413);
-            txtStuLast.Margin = new Padding(3, 4, 3, 4);
+            txtStuLast.Location = new Point(377, 310);
             txtStuLast.Name = "txtStuLast";
-            txtStuLast.Size = new Size(205, 27);
+            txtStuLast.Size = new Size(180, 23);
             txtStuLast.TabIndex = 4;
             // 
             // lblStuPhone
             // 
             lblStuPhone.AutoSize = true;
-            lblStuPhone.Location = new Point(674, 413);
+            lblStuPhone.Location = new Point(590, 310);
             lblStuPhone.Name = "lblStuPhone";
-            lblStuPhone.Size = new Size(53, 20);
+            lblStuPhone.Size = new Size(44, 15);
             lblStuPhone.TabIndex = 5;
             lblStuPhone.Text = "Phone:";
             // 
             // txtStuPhone
             // 
-            txtStuPhone.Location = new Point(733, 413);
-            txtStuPhone.Margin = new Padding(3, 4, 3, 4);
+            txtStuPhone.Location = new Point(641, 310);
             txtStuPhone.Name = "txtStuPhone";
-            txtStuPhone.Size = new Size(205, 27);
+            txtStuPhone.Size = new Size(180, 23);
             txtStuPhone.TabIndex = 6;
             // 
             // btnStuAdd
             // 
-            btnStuAdd.Location = new Point(11, 448);
-            btnStuAdd.Margin = new Padding(3, 4, 3, 4);
+            btnStuAdd.Location = new Point(10, 336);
             btnStuAdd.Name = "btnStuAdd";
-            btnStuAdd.Size = new Size(114, 47);
+            btnStuAdd.Size = new Size(100, 35);
             btnStuAdd.TabIndex = 7;
             btnStuAdd.Text = "Add";
             btnStuAdd.Click += btnStuAdd_Click;
             // 
             // btnStuUpdate
             // 
-            btnStuUpdate.Location = new Point(147, 448);
-            btnStuUpdate.Margin = new Padding(3, 4, 3, 4);
+            btnStuUpdate.Location = new Point(129, 336);
             btnStuUpdate.Name = "btnStuUpdate";
-            btnStuUpdate.Size = new Size(114, 47);
+            btnStuUpdate.Size = new Size(100, 35);
             btnStuUpdate.TabIndex = 8;
             btnStuUpdate.Text = "Update";
             btnStuUpdate.Click += btnStuUpdate_Click;
             // 
             // btnStuDelete
             // 
-            btnStuDelete.Location = new Point(277, 448);
-            btnStuDelete.Margin = new Padding(3, 4, 3, 4);
+            btnStuDelete.Location = new Point(242, 336);
             btnStuDelete.Name = "btnStuDelete";
-            btnStuDelete.Size = new Size(114, 47);
+            btnStuDelete.Size = new Size(100, 35);
             btnStuDelete.TabIndex = 9;
             btnStuDelete.Text = "Delete";
             btnStuDelete.Click += btnStuDelete_Click;
             // 
             // btnStuClear
             // 
-            btnStuClear.Location = new Point(413, 448);
-            btnStuClear.Margin = new Padding(3, 4, 3, 4);
+            btnStuClear.Location = new Point(361, 336);
             btnStuClear.Name = "btnStuClear";
-            btnStuClear.Size = new Size(114, 47);
+            btnStuClear.Size = new Size(100, 35);
             btnStuClear.TabIndex = 10;
             btnStuClear.Text = "Clear";
             btnStuClear.Click += btnStuClear_Click;
@@ -207,11 +197,10 @@ namespace Ef_Project
             tabCourse.Controls.Add(btnCrsUpdate);
             tabCourse.Controls.Add(btnCrsDelete);
             tabCourse.Controls.Add(btnCrsClear);
-            tabCourse.Location = new Point(4, 29);
-            tabCourse.Margin = new Padding(3, 4, 3, 4);
+            tabCourse.Location = new Point(4, 24);
             tabCourse.Name = "tabCourse";
-            tabCourse.Padding = new Padding(3, 4, 3, 4);
-            tabCourse.Size = new Size(1021, 714);
+            tabCourse.Padding = new Padding(3, 3, 3, 3);
+            tabCourse.Size = new Size(892, 532);
             tabCourse.TabIndex = 1;
             tabCourse.Text = "Courses";
             tabCourse.UseVisualStyleBackColor = true;
@@ -221,134 +210,124 @@ namespace Ef_Project
             dgvCourses.AllowUserToAddRows = false;
             dgvCourses.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvCourses.ColumnHeadersHeight = 29;
-            dgvCourses.Location = new Point(11, 13);
-            dgvCourses.Margin = new Padding(3, 4, 3, 4);
+            dgvCourses.Location = new Point(10, 10);
             dgvCourses.MultiSelect = false;
             dgvCourses.Name = "dgvCourses";
             dgvCourses.ReadOnly = true;
             dgvCourses.RowHeadersWidth = 51;
             dgvCourses.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvCourses.Size = new Size(983, 373);
+            dgvCourses.Size = new Size(860, 280);
             dgvCourses.TabIndex = 0;
             dgvCourses.Click += dgvCourses_Click;
             // 
             // lblCrsName
             // 
             lblCrsName.AutoSize = true;
-            lblCrsName.Location = new Point(11, 413);
+            lblCrsName.Location = new Point(10, 310);
             lblCrsName.Name = "lblCrsName";
-            lblCrsName.Size = new Size(52, 20);
+            lblCrsName.Size = new Size(42, 15);
             lblCrsName.TabIndex = 1;
             lblCrsName.Text = "Name:";
             // 
             // txtCrsName
             // 
-            txtCrsName.Location = new Point(114, 413);
-            txtCrsName.Margin = new Padding(3, 4, 3, 4);
+            txtCrsName.Location = new Point(58, 310);
             txtCrsName.Name = "txtCrsName";
-            txtCrsName.Size = new Size(228, 27);
+            txtCrsName.Size = new Size(200, 23);
             txtCrsName.TabIndex = 2;
             // 
             // lblCrsDuration
             // 
             lblCrsDuration.AutoSize = true;
-            lblCrsDuration.Location = new Point(366, 413);
+            lblCrsDuration.Location = new Point(274, 313);
             lblCrsDuration.Name = "lblCrsDuration";
-            lblCrsDuration.Size = new Size(70, 20);
+            lblCrsDuration.Size = new Size(56, 15);
             lblCrsDuration.TabIndex = 3;
             lblCrsDuration.Text = "Duration:";
             // 
             // txtCrsDuration
             // 
-            txtCrsDuration.Location = new Point(457, 413);
-            txtCrsDuration.Margin = new Padding(3, 4, 3, 4);
+            txtCrsDuration.Location = new Point(336, 307);
             txtCrsDuration.Name = "txtCrsDuration";
-            txtCrsDuration.Size = new Size(114, 27);
+            txtCrsDuration.Size = new Size(100, 23);
             txtCrsDuration.TabIndex = 4;
             // 
             // lblCrsDept
             // 
             lblCrsDept.AutoSize = true;
-            lblCrsDept.Location = new Point(11, 413);
+            lblCrsDept.Location = new Point(503, 388);
             lblCrsDept.Name = "lblCrsDept";
-            lblCrsDept.Size = new Size(92, 20);
+            lblCrsDept.Size = new Size(73, 15);
             lblCrsDept.TabIndex = 5;
             lblCrsDept.Text = "Department:";
             // 
             // cmbCrsDept
             // 
             cmbCrsDept.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbCrsDept.Location = new Point(114, 413);
-            cmbCrsDept.Margin = new Padding(3, 4, 3, 4);
+            cmbCrsDept.Location = new Point(586, 385);
             cmbCrsDept.Name = "cmbCrsDept";
-            cmbCrsDept.Size = new Size(228, 28);
+            cmbCrsDept.Size = new Size(200, 23);
             cmbCrsDept.TabIndex = 6;
             // 
             // lblCrsInstructor
             // 
             lblCrsInstructor.AutoSize = true;
-            lblCrsInstructor.Location = new Point(366, 413);
+            lblCrsInstructor.Location = new Point(515, 329);
             lblCrsInstructor.Name = "lblCrsInstructor";
-            lblCrsInstructor.Size = new Size(74, 20);
+            lblCrsInstructor.Size = new Size(61, 15);
             lblCrsInstructor.TabIndex = 7;
             lblCrsInstructor.Text = "Instructor:";
             // 
             // cmbCrsInstructor
             // 
             cmbCrsInstructor.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbCrsInstructor.Location = new Point(589, 410);
-            cmbCrsInstructor.Margin = new Padding(3, 4, 3, 4);
+            cmbCrsInstructor.Location = new Point(586, 326);
             cmbCrsInstructor.Name = "cmbCrsInstructor";
-            cmbCrsInstructor.Size = new Size(228, 28);
+            cmbCrsInstructor.Size = new Size(200, 23);
             cmbCrsInstructor.TabIndex = 8;
             // 
             // btnCrsAdd
             // 
-            btnCrsAdd.Location = new Point(23, 463);
-            btnCrsAdd.Margin = new Padding(3, 4, 3, 4);
+            btnCrsAdd.Location = new Point(20, 347);
             btnCrsAdd.Name = "btnCrsAdd";
-            btnCrsAdd.Size = new Size(114, 47);
+            btnCrsAdd.Size = new Size(100, 35);
             btnCrsAdd.TabIndex = 9;
             btnCrsAdd.Text = "Add";
             btnCrsAdd.Click += btnCrsAdd_Click;
             // 
             // btnCrsUpdate
             // 
-            btnCrsUpdate.Location = new Point(143, 463);
-            btnCrsUpdate.Margin = new Padding(3, 4, 3, 4);
+            btnCrsUpdate.Location = new Point(125, 347);
             btnCrsUpdate.Name = "btnCrsUpdate";
-            btnCrsUpdate.Size = new Size(114, 47);
+            btnCrsUpdate.Size = new Size(100, 35);
             btnCrsUpdate.TabIndex = 10;
             btnCrsUpdate.Text = "Update";
             btnCrsUpdate.Click += btnCrsUpdate_Click;
             // 
             // btnCrsDelete
             // 
-            btnCrsDelete.Location = new Point(263, 463);
-            btnCrsDelete.Margin = new Padding(3, 4, 3, 4);
+            btnCrsDelete.Location = new Point(230, 347);
             btnCrsDelete.Name = "btnCrsDelete";
-            btnCrsDelete.Size = new Size(114, 47);
+            btnCrsDelete.Size = new Size(100, 35);
             btnCrsDelete.TabIndex = 11;
             btnCrsDelete.Text = "Delete";
             btnCrsDelete.Click += btnCrsDelete_Click;
             // 
             // btnCrsClear
             // 
-            btnCrsClear.Location = new Point(393, 463);
-            btnCrsClear.Margin = new Padding(3, 4, 3, 4);
+            btnCrsClear.Location = new Point(344, 347);
             btnCrsClear.Name = "btnCrsClear";
-            btnCrsClear.Size = new Size(114, 47);
+            btnCrsClear.Size = new Size(100, 35);
             btnCrsClear.TabIndex = 12;
             btnCrsClear.Text = "Clear";
             btnCrsClear.Click += btnCrsClear_Click;
             // 
             // StudentCourseForm
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1029, 747);
+            ClientSize = new Size(900, 560);
             Controls.Add(tabControl);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "StudentCourseForm";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Students & Courses";

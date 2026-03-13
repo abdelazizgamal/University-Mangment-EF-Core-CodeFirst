@@ -72,8 +72,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnDeptInstructor;
-        private System.Windows.Forms.Button btnStudentCourse;
-        private System.Windows.Forms.Label lblTitle;
+        private Button btnDeptInstructor;
+        private Button btnStudentCourse;
+        private Label lblTitle;
     }
 }
